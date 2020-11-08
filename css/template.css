@@ -1,0 +1,13 @@
+#input {
+  float: left;
+  width: 30%;
+  margin-right: 2em;
+}
+#input div {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+p {
+  background-color: rgb(133, 212, 171);
+}
