@@ -3,5 +3,5 @@ function myFun() {
   alert("測試文字 myFun");
 }
 $(function () {
-  myFun();
+  // myFun();
 });

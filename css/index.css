@@ -1,0 +1,265 @@
+/* =============== visual design settings ============= */
+#aboutMe {
+  background-color: #fff3ad;
+  overflow: hidden;
+}
+
+#sideProjects {
+  background-color: rgb(137, 182, 143);
+  padding: 0 1em;
+}
+#contact {
+  background-color: rgb(255, 128, 128);
+  padding: 0 1em;
+}
+
+.col-md {
+  background-color: rgb(224, 241, 225);
+  min-height: 10px;
+}
+
+.projectArea {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+}
+
+/* font setting*/
+.projectTitle {
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 24px;
+  display: inline-block;
+  background-color: #56b653;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.hoveredFont_screenshot {
+  font-weight: 700;
+  height: 40%;
+  width: 100%;
+  letter-spacing: 2px;
+  font-size: 12px;
+  display: inline-block;
+  background-color: #ffffff;
+  /* border-radius: 30px; */
+  margin: 20% auto;
+}
+
+/* img */
+img {
+  vertical-align: middle;
+}
+
+/* div */
+
+/* text */
+.text-center {
+  text-align: center;
+  word-wrap: break-word;
+}
+/* =============== RWD settings ============= */
+/* RWD */
+.row {
+  display: flex; /*使用flexbox*/
+  flex-wrap: wrap; /*超出範圍時是否換行的屬性*/
+  justify-content: center; /*物件顯示置中*/
+}
+
+@media (max-width: 768px) {
+  .col-sm,
+  .col-md {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0.5em auto;
+    width: 90%;
+    /* min-height: 1px; */
+    /* flex-basis: calc(-30px + 100% * 6 * 1 / 12); */
+    /* background-color: rgb(183, 240, 197); */
+  }
+}
+
+@media (min-width: 768px) {
+  .col-sm,
+  .col-md {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0.5em auto;
+    /* flex: 1; 填滿剩餘空間*/
+    width: 90%; /*使用固定寬度*/
+    /* min-height: 1px; */
+  }
+}
+@media (min-width: 991px) {
+  .col-sm,
+  .col-md {
+    padding-right: 15px;
+    padding-left: 15px;
+    /* margin: 0.5em auto; */
+    /* flex: 1; 填滿剩餘空間*/
+    width: 40%; /*使用固定寬度*/
+    /* min-height: 1px; */
+  }
+}
+
+/* =============== base settings ============= */
+/* remove the blank*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* prevent the layout from being messy*/
+html,
+body,
+header,
+section,
+div {
+  position: relative;
+}
+
+/* =============== sidebar settings ============= */
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+}
+.text_center {
+  text-align: center;
+}
+.social_icons {
+  margin: 0.5em auto;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+/* in descending order */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+  .projectTitle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+  .projectTitle {
+    font-size: 12px;
+  }
+}
+/* =============== effect settings ============= */
+/* Image Overlay Fade */
+.logo {
+  width: 270px;
+  margin: 0em auto; /*調整logo圖片所在位置的整體大小*/
+  text-align: center; /*圖片在div中水平置中*/
+}
+
+/* resize images */
+.screenshot {
+  width: 100%;
+  margin: 0 auto;
+}
+.screenshot img {
+  width: 100%;
+  height: auto;
+}
+
+/* setting */
+.img_hover {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.logo:hover .hoveredText_logo,
+.screenshot:hover .hoveredText_screenshot {
+  opacity: 0.6;
+}
+.logo:hover .img_hover,
+.screenshot:hover .img_hover {
+  opacity: 1;
+}
+
+.hoveredText_logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%; /*有設定才會根據div的大小做百分比調整，沒設定則是使用原圖片寬度*/
+  opacity: 0; /*title文字框的透明度*/
+  transition: 0.5s ease;
+  background-color: #ffffff;
+  line-height: 270px; /* The same as your div height: 因為是跟著圖片的，所以 height = width = 270px*/
+}
+.hoveredText_screenshot {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%; /*有設定才會根據div的大小做百分比調整，沒設定則是使用原圖片寬度*/
+  opacity: 0; /*title文字框的透明度*/
+  transition: 0.5s ease;
+  /* background-color: #ffffff; */
+  line-height: 120px; /* 文字置中:The same as your div height: 因為是跟著圖片的，所以 height = 120px*/
+}
+
+.hoveredText_screenshot a:hover {
+  color: #093514;
+}

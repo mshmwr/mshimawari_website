@@ -1,13 +1,71 @@
-#input {
-  float: left;
+#header {
+  /* float: left;
   width: 30%;
-  margin-right: 2em;
+  margin-right: 2em; */
+  background-color: rgb(102, 101, 100);
 }
-#input div {
-  margin-top: 0.5em;
-  text-align: center;
+#header .row {
+  /* 只想把header下的.row上色*/
+  /* background-color: rgb(255, 128, 0); */
+}
+#contact,
+#aboutMe {
+  background-color: rgb(230, 115, 57);
 }
 
 p {
-  background-color: rgb(133, 212, 171);
+  background-color: rgb(183, 240, 197);
+}
+
+/*RWD*/
+
+.row {
+  display: flex; /*使用flexbox*/
+  flex-wrap: wrap; /*超出範圍時是否換行的屬性*/
+  justify-content: center; /*物件顯示置中*/
+}
+
+@media (max-width: 768px) {
+  .col-sm {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0.5em auto;
+    width: 90%;
+    min-height: 1px;
+    /* flex-basis: calc(-30px + 100% * 6 * 1 / 12); */
+    background-color: rgb(183, 240, 197);
+  }
+}
+
+@media (min-width: 768px) {
+  .col-sm {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0.5em auto;
+
+    /*填滿剩餘空間*/
+    /* flex: 1; */
+
+    /*使用固定寬度*/
+    width: 38%;
+
+    min-height: 1px;
+    background-color: rgb(230, 233, 47);
+  }
+}
+@media (min-width: 991px) {
+  .col-sm {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0.5em auto;
+
+    /*填滿剩餘空間*/
+    /* flex: 1; */
+
+    /*使用固定寬度*/
+    width: 80%;
+
+    min-height: 1px;
+    background-color: rgb(199, 156, 77);
+  }
 }

@@ -1,22 +1,84 @@
 <html>
-  <head>
-    <!-- 外部引用 -->
-    <!-- 引用jQuery -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <!-- 引用外部css -->
-    <link rel="stylesheet" type="text/css" href="css/template.css" />
-    <!-- 引用外部js -->
-    <script type="text/javascript" src="js/template.js"></script>
 
-    <!-- 內部使用js -->
-    <!-- <script language="javascript">
+<head>
+  <!-- 外部引用 -->
+  <!-- 引用jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <!-- 引用外部css -->
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <!-- 引用外部js -->
+  <script type="text/javascript" src="js/index.js"></script>
+
+  <!-- 在針對要實作 RWD 的網頁中，HTML 的 head 部分必須設定 viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- 內部使用js -->
+  <!-- <script language="javascript">
     alert('測試文字');
     alert('測試文字第一行<br>測試文字第二行');
     alert('測試文字第一行\n測試文字第二行');
   </script> -->
-  </head>
 
-  <body>
-    <p>Nothing just a template.</p>
-  </body>
+  <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Side navigation -->
+    <section class="sidenav">
+      <a href="index.html" target="" title="Home">Home</a>
+      <a href="#aboutMe" target="" title="About Me">About Me</a>
+      <a href="#sideProjects" target="" title="Side Projects">Side Projects</a>
+      <a href="#contact" target="" title="Contact">Contact</a>
+      <!-- <a href="cv.html" target="" title="himawari's CV">向日葵小姐的CV</a> -->
+    </section>
+
+    <!-- Page content -->
+    <section class="main">
+      
+      <div id="aboutMe">
+        <div class="text_center">
+          <p>Ms. Himawari</p>
+        </div>
+        <div class="logo">
+          <img src="asset/img/mshimawari_logo.png" alt="mshimawari_logo" class="img_hover">
+          <div class="hoveredText_logo">Hello╰(*°▽°*)╯</div>
+        </div>
+        <div class="social_icons text_center">
+          <a href="https://github.com/mshmwr" alt="mshimawari_github">
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a href="https://zh.wikipedia.org/zh-tw/%E5%90%91%E6%97%A5%E8%91%B5" alt="himawari_wiki">
+            <i class="fab fa-wikipedia-w fa-lg"></i>
+          </a>
+          
+        </div>
+      </div>
+      <div id="sideProjects" class="row text-center">
+        <div class="col-md projectArea">
+          <p class="projectTitle">Split Bilingual Reading Passages</p>  
+          <div class="screenshot">
+            <img src="asset/img/screenshot_sideProject/01_split.png" alt="project_button_01_split" class="img_hover">
+            <div class="hoveredText_screenshot">
+              <a href="asset/side_projects/Split_Bilingual_Reading_Passages/splitBilingualReadingPassages.html" target="_blank"
+                title="View Split Bilingual Reading Passages" class="hoveredFont_screenshot">View this project
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md projectArea"></div>
+        <div class="col-md projectArea"></div>
+        <div class="col-md projectArea"></div> -->
+      </div>
+      <!-- <div id="contact">
+        <div>contact 1<br /><br /><br /><br /><br /><br /><br /></div>
+        <div>contact 2<br /><br /><br /><br /><br /><br /><br /></div>
+        <div>contact 3<br /><br /><br /><br /><br /><br /><br /></div>
+        <div>contact 4<br /><br /><br /><br /><br /><br /><br /></div>
+        <div>contact 5<br /><br /><br /><br /><br /><br /><br /></div>
+        <div>contact 6<br /><br /><br /><br /><br /><br /><br /></div>
+      </div> -->
+    </section>
+    
+</body>
+
 </html>
