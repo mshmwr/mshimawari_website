@@ -1,3 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+/* =============== base settings ============= */
+/* remove the blank*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* prevent the layout from being messy*/
+html,
+body,
+header,
+section,
+div {
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Playfair Display", serif;
+}
+
 /* =============== visual design settings ============= */
 #aboutMe {
   overflow: hidden;
@@ -5,7 +33,7 @@
 }
 
 #sideProjects {
-  padding: 0 1em;
+  padding: 1em;
 }
 #contact {
   background-color: rgb(255, 128, 128);
@@ -24,6 +52,14 @@
   color: #1a535c;
   font-size: 24px;
 }
+
+.context-text {
+  color: #ff6b6b;
+  font-size: 16px;
+  margin: 2rem auto;
+  width: 80%;
+  text-align: center;
+}
 .center {
   top: 50%;
   transform: translateY(-50%);
@@ -31,8 +67,8 @@
 
 p {
   /*修改p預設的值(1em)為0em*/
-  margin-block-start: 0em !important;
-  margin-block-end: 0em !important;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 .singleLineRegion {
   margin: 10px auto;
@@ -48,6 +84,7 @@ p {
 .projectArea {
   border-radius: 10px;
   overflow: hidden;
+  max-height: 18rem;
 }
 
 a {
@@ -58,7 +95,7 @@ a {
 }
 
 /* font setting*/
-.projectTitle {
+.projectArea__projectTitle {
   font-weight: 700;
   letter-spacing: 2px;
   font-size: 24px;
@@ -66,6 +103,8 @@ a {
   background-color: #56b653;
   border-radius: 30px;
   padding: 10px 20px;
+  margin: 1rem auto;
+  width: 100%;
 }
 
 .hoveredFont_screenshot {
@@ -77,7 +116,6 @@ a {
   display: inline-block;
   background-color: #ffffff;
   /* border-radius: 30px; */
-  margin: 20% auto;
 }
 
 /* img */
@@ -134,22 +172,6 @@ img {
     width: 40%; /*使用固定寬度*/
     /* min-height: 1px; */
   }
-}
-
-/* =============== base settings ============= */
-/* remove the blank*/
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* prevent the layout from being messy*/
-html,
-body,
-header,
-section,
-div {
-  position: relative;
 }
 
 /* =============== sidebar settings ============= */
@@ -213,7 +235,7 @@ div {
   .sidenav a {
     font-size: 18px;
   }
-  .projectTitle {
+  .projectArea__projectTitle {
     font-size: 20px;
   }
 }
@@ -225,7 +247,7 @@ div {
   .sidenav a {
     font-size: 18px;
   }
-  .projectTitle {
+  .projectArea__projectTitle {
     font-size: 12px;
   }
 }
@@ -238,11 +260,11 @@ div {
 }
 
 /* resize images */
-.screenshot {
+.projectArea__screenshot {
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
 }
-.screenshot img {
+.projectArea__screenshot img {
   width: 100%;
   height: auto;
 }
@@ -255,11 +277,11 @@ div {
 }
 
 .logo:hover .hoveredText_logo,
-.screenshot:hover .hoveredText_screenshot {
+.projectArea__screenshot:hover .hoveredText_screenshot {
   opacity: 0.6;
 }
 .logo:hover .img_hover,
-.screenshot:hover .img_hover {
+.projectArea__screenshot:hover .img_hover {
   opacity: 1;
 }
 

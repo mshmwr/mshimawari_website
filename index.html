@@ -1,78 +1,191 @@
 <html>
+  <head>
+    <!-- 外部引用 -->
+    <!-- 引用jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!-- 引用外部css -->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <!-- 引用外部js -->
+    <script type="text/javascript" src="js/index.js"></script>
 
-<head>
-  <!-- 外部引用 -->
-  <!-- 引用jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <!-- 引用外部css -->
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
-  <!-- 引用外部js -->
-  <script type="text/javascript" src="js/index.js"></script>
+    <!-- 在針對要實作 RWD 的網頁中，HTML 的 head 部分必須設定 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 內部使用js -->
 
-  <!-- 在針對要實作 RWD 的網頁中，HTML 的 head 部分必須設定 viewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- 內部使用js -->
-  <!-- <script language="javascript">
-    alert('測試文字');
-    alert('測試文字第一行<br>測試文字第二行');
-    alert('測試文字第一行\n測試文字第二行');
-  </script> -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.1/css/all.css"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
-
-</head>
-
-<body>
+  <body>
     <!-- Side navigation -->
     <section class="sidenav">
       <a href="index.html" target="" title="Home">Home</a>
       <a href="#aboutMe" target="" title="About Me">About Me</a>
       <a href="#sideProjects" target="" title="Side Projects">Side Projects</a>
-      <a href="#contact" target="" title="Contact">Contact</a>
-      <a href="side_projects/JS30" target="" title="JS30">JS30</a>
-      <!-- <a href="cv.html" target="" title="himawari's CV">向日葵小姐的CV</a> -->
+      <a
+        href="https://drive.google.com/file/d/1GZUXK3z-P4Iit4eq_BfmV5FCIuBsPNMc/view?usp=sharing"
+        target="_blank"
+        title="himawari's CV"
+        >CV</a
+      >
     </section>
 
     <!-- Page content -->
     <section class="main">
-      
+      <!-- about me -->
       <div id="aboutMe" class="mainBlock">
         <div class="center">
           <div class="text_center singleLineRegion">
             <p class="title">Ms. Himawari</p>
           </div>
           <div class="logo">
-            <img src="asset/img/mshimawari_logo.png" alt="mshimawari_logo" class="img_hover">
+            <img
+              src="asset/img/mshimawari_logo.png"
+              alt="mshimawari_logo"
+              class="img_hover"
+            />
             <div class="hoveredText_logo">Hello╰(*°▽°*)╯</div>
+          </div>
+          <div class="context-text">
+            Follow your heart, do the things that make you happy.
           </div>
           <div class="social_icons text_center singleLineRegion">
             <a href="https://github.com/mshmwr" alt="mshimawari_github">
               <i class="fab fa-github fa-lg"></i>
             </a>
-            <a href="https://zh.wikipedia.org/zh-tw/%E5%90%91%E6%97%A5%E8%91%B5" alt="himawari_wiki">
-              <i class="fab fa-wikipedia-w fa-lg"></i>
+            <a
+              href="https://www.linkedin.com/in/yichenlee-career/"
+              alt="himawari_linkedIn"
+            >
+              <i class="fab fa-linkedin fa-lg"></i>
             </a>
           </div>
         </div>
       </div>
+
       <div id="sideProjects" class="mainBlock">
-        <div class="text_left blockTitle">Side Projects
-          <!-- <p class="blockTitle">Ms. Himawari</p> -->
-        </div>
+        <div class="text_left blockTitle">Side Projects</div>
         <div class="row text-center">
           <div class="col-md projectArea">
-            <p class="projectTitle">Split Bilingual Reading Passages</p>
-            <div class="screenshot">
-              <img src="asset/img/screenshot_sideProject/01_split.png" alt="project_button_01_split" class="img_hover">
+            <p class="projectArea__projectTitle">Reserve Your Singing Day</p>
+            <div class="projectArea__screenshot">
+              <img
+                src="asset/img/screenshot_sideProject/03-reservation-homepage.png"
+                alt="project_button_01_split"
+                class="img_hover"
+              />
               <div class="hoveredText_screenshot">
-                <a href="asset/side_projects/Split_Bilingual_Reading_Passages/splitBilingualReadingPassages.html" target="_blank"
-                  title="View Split Bilingual Reading Passages" class="hoveredFont_screenshot">View this project
+                <a
+                  href="https://github.com/mshmwr/reservation-system-with-db#readme"
+                  target="_blank"
+                  title="View Reserve Your Singing Day"
+                  class="hoveredFont_screenshot"
+                  >View this project
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md projectArea">
+            <p class="projectArea__projectTitle">Taipei-Day</p>
+            <div class="projectArea__screenshot">
+              <img
+                src="asset/img/screenshot_sideProject/02-taipei-day-homepage.png"
+                alt="project_button_01_split"
+                class="img_hover"
+              />
+              <div class="hoveredText_screenshot">
+                <a
+                  href="https://github.com/mshmwr/taipei-day-trip-website#readme"
+                  target="_blank"
+                  title="View Taipei-Day"
+                  class="hoveredFont_screenshot"
+                  >View this project
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md projectArea">
+            <p class="projectArea__projectTitle">Have Your Own Penguin</p>
+            <div class="projectArea__screenshot">
+              <img
+                src="asset/img/screenshot_sideProject/04-Have-Your-Own-Penguin.png"
+                alt="project_button_01_split"
+                class="img_hover"
+              />
+              <div class="hoveredText_screenshot">
+                <a
+                  href="https://codepen.io/mshmwr/pen/PobwbEq"
+                  target="_blank"
+                  title="View Split Bilingual Reading Passages"
+                  class="hoveredFont_screenshot"
+                  >View this project
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md projectArea">
+            <p class="projectArea__projectTitle">Weather forecast website</p>
+            <div class="projectArea__screenshot">
+              <img
+                src="asset/img/screenshot_sideProject/05-weather-forecast-website.png"
+                alt="project_button_01_split"
+                class="img_hover"
+              />
+              <div class="hoveredText_screenshot">
+                <a
+                  href="https://songlin1026.github.io/team-weather/"
+                  target="_blank"
+                  title="View Weather forecast website"
+                  class="hoveredFont_screenshot"
+                  >View this project
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md projectArea">
+            <p class="projectArea__projectTitle">Let's Translation</p>
+            <div class="projectArea__screenshot">
+              <img
+                src="asset/img/screenshot_sideProject/06-Let's translation.png"
+                alt="project_button_01_split"
+                class="img_hover"
+              />
+              <div class="hoveredText_screenshot">
+                <a
+                  href="https://github.com/mshmwr/Let-s-translation#readme"
+                  target="_blank"
+                  title="View Split Bilingual Reading Passages"
+                  class="hoveredFont_screenshot"
+                  >View this project
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md projectArea">
+            <p class="projectArea__projectTitle">
+              Split Bilingual Reading Passages
+            </p>
+            <div class="projectArea__screenshot">
+              <img
+                src="asset/img/screenshot_sideProject/01_split.png"
+                alt="project_button_01_split"
+                class="img_hover"
+              />
+              <div class="hoveredText_screenshot">
+                <a
+                  href="asset/side_projects/Split_Bilingual_Reading_Passages/splitBilingualReadingPassages.html"
+                  target="_blank"
+                  title="View Split Bilingual Reading Passages"
+                  class="hoveredFont_screenshot"
+                  >View this project
                 </a>
               </div>
             </div>
           </div>
         </div>
-        
+
         <!-- <div class="col-md projectArea"></div>
         <div class="col-md projectArea"></div>
         <div class="col-md projectArea"></div> -->
@@ -86,7 +199,5 @@
         <div>contact 6<br /><br /><br /><br /><br /><br /><br /></div>
       </div> -->
     </section>
-    
-</body>
-
+  </body>
 </html>
