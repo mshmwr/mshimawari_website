@@ -14,7 +14,7 @@
   border: 1px solid var(--dark-green);
   border-radius: 5px;
   width: 30%;
-  height: 80vh;
+  height: 70%;
 }
 .creation__title {
   text-align: center;
@@ -29,8 +29,9 @@
 
 .creation__item__img {
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 0.5rem auto;
+  background-color: tomato;
 }
 
 @media screen and (max-width: 1000px) {
