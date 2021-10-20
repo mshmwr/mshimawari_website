@@ -1,3 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+:root {
+  --pink: #ff8080;
+  --red: #ff6b6b;
+  --orange: #ff6b6b;
+  --yellow: #ffe66d;
+  --light-green: #f7fff7;
+  --mint-green: #e0f1e1;
+  --grass-green: #56b653;
+  --dark-green: #1a535c;
+  --deep-green: #093514;
+  --white: #ffffff;
+}
+
+/* =============== base settings ============= */
+/* remove the blank*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* prevent the layout from being messy*/
+html,
+body,
+header,
+section,
+div {
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Playfair Display", serif;
+}
+
 /* =============== visual design settings ============= */
 #aboutMe {
   overflow: hidden;
@@ -5,24 +45,32 @@
 }
 
 #sideProjects {
-  padding: 0 1em;
+  padding: 1em;
 }
 #contact {
-  background-color: rgb(255, 128, 128);
+  background-color: var(--pink);
   padding: 0 1em;
 }
 
 .mainBlock {
-  background-color: #f7fff7;
+  background-color: var(--light-green);
 }
 
 .title {
-  color: #ff6b6b;
+  color: var(--red);
   font-size: 24px;
 }
 .blockTitle {
-  color: #1a535c;
+  color: var(--dark-green);
   font-size: 24px;
+}
+
+.context-text {
+  color: var(--red);
+  font-size: 16px;
+  margin: 2rem auto;
+  width: 80%;
+  text-align: center;
 }
 .center {
   top: 50%;
@@ -31,8 +79,8 @@
 
 p {
   /*修改p預設的值(1em)為0em*/
-  margin-block-start: 0em !important;
-  margin-block-end: 0em !important;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 .singleLineRegion {
   margin: 10px auto;
@@ -41,13 +89,14 @@ p {
 }
 
 .col-md {
-  background-color: rgb(224, 241, 225);
+  background-color: var(--mint-green);
   min-height: 10px;
 }
 
 .projectArea {
   border-radius: 10px;
   overflow: hidden;
+  max-height: 18rem;
 }
 
 a {
@@ -58,14 +107,16 @@ a {
 }
 
 /* font setting*/
-.projectTitle {
+.projectArea__projectTitle {
   font-weight: 700;
   letter-spacing: 2px;
   font-size: 24px;
   display: inline-block;
-  background-color: #56b653;
+  background-color: var(--grass-green);
   border-radius: 30px;
   padding: 10px 20px;
+  margin: 1rem auto;
+  width: 100%;
 }
 
 .hoveredFont_screenshot {
@@ -75,9 +126,7 @@ a {
   letter-spacing: 2px;
   font-size: 12px;
   display: inline-block;
-  background-color: #ffffff;
-  /* border-radius: 30px; */
-  margin: 20% auto;
+  background-color: var(--white);
 }
 
 /* img */
@@ -136,22 +185,6 @@ img {
   }
 }
 
-/* =============== base settings ============= */
-/* remove the blank*/
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* prevent the layout from being messy*/
-html,
-body,
-header,
-section,
-div {
-  position: relative;
-}
-
 /* =============== sidebar settings ============= */
 
 /* The sidebar menu */
@@ -162,7 +195,7 @@ div {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #1a535c;
+  background-color: var(--dark-green);
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }
@@ -172,13 +205,13 @@ div {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 22px;
-  color: #f7fff7;
+  color: var(--light-green);
   display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #ffe66d;
+  color: var(--yellow);
 }
 
 /* Style page content */
@@ -192,7 +225,7 @@ div {
   text-align: left; /*j物件顯示置中*/
 }
 .social_icons {
-  color: #ff6b6b;
+  color: var(--orange);
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -213,7 +246,7 @@ div {
   .sidenav a {
     font-size: 18px;
   }
-  .projectTitle {
+  .projectArea__projectTitle {
     font-size: 20px;
   }
 }
@@ -225,7 +258,7 @@ div {
   .sidenav a {
     font-size: 18px;
   }
-  .projectTitle {
+  .projectArea__projectTitle {
     font-size: 12px;
   }
 }
@@ -238,11 +271,11 @@ div {
 }
 
 /* resize images */
-.screenshot {
+.projectArea__screenshot {
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
 }
-.screenshot img {
+.projectArea__screenshot img {
   width: 100%;
   height: auto;
 }
@@ -255,11 +288,11 @@ div {
 }
 
 .logo:hover .hoveredText_logo,
-.screenshot:hover .hoveredText_screenshot {
+.projectArea__screenshot:hover .hoveredText_screenshot {
   opacity: 0.6;
 }
 .logo:hover .img_hover,
-.screenshot:hover .img_hover {
+.projectArea__screenshot:hover .img_hover {
   opacity: 1;
 }
 
@@ -273,7 +306,7 @@ div {
   width: 100%; /*有設定才會根據div的大小做百分比調整，沒設定則是使用原圖片寬度*/
   opacity: 0; /*title文字框的透明度*/
   transition: 0.5s ease;
-  background-color: #ffffff;
+  background-color: var(--white);
   line-height: 270px; /* The same as your div height: 因為是跟著圖片的，所以 height = width = 270px*/
 }
 .hoveredText_screenshot {
@@ -286,10 +319,9 @@ div {
   width: 100%; /*有設定才會根據div的大小做百分比調整，沒設定則是使用原圖片寬度*/
   opacity: 0; /*title文字框的透明度*/
   transition: 0.5s ease;
-  /* background-color: #ffffff; */
   line-height: 120px; /* 文字置中:The same as your div height: 因為是跟著圖片的，所以 height = 120px*/
 }
 
 .hoveredText_screenshot a:hover {
-  color: #093514;
+  color: var(--deep-green);
 }
